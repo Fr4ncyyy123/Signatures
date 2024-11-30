@@ -49,14 +49,14 @@ Clear-Host
 $host.privatedata.ProgressForegroundColor = "red";
 $host.privatedata.ProgressBackgroundColor = "black";
 
-$pathsFilePath = "paths.txt"
+$pathsFilePath = "pasta.txt"
 if(-Not(Test-Path -Path $pathsFilePath)){
     Write-Warning "The file $pathsFilePath does not exist."
     Start-Sleep 10
     Exit
 }
 
-$paths = Get-Content "paths.txt"
+$paths = Get-Content "pasta.txt"
 $stopwatch = [Diagnostics.Stopwatch]::StartNew()
 
 $results = @()
